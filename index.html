@@ -5,39 +5,33 @@
     <title>Local Weather App</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <script src="http://codepen.io/fbrz/pen/9a3e4ee2ef6dfd479ad33a2c85146fc1.js"></script>
+    <script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
 
-<div class="container text-center">
+<div class="container">
     <div class="row">
-        <h1 class="off">Local Weather App</h1>
+        <h1>Local Weather App</h1>
     </div>
-    <div class="row pic-container">
-        <div id="pic" class="sunny"></div>
-            <!--<div class="sunny"></div>-->
-            <!--<div class="cloudy"></div>-->
-            <!--<div class="rainy"></div>-->
-            <!--<div class="snowy"></div>-->
-            <!--<div class="rainbow"></div>-->
-            <!--<div class="starry"></div>-->
-            <!--<div class="stormy"></div>-->
+
+    <div class="row">
+        <canvas id="weather-icon" width="256" height="256"></canvas>
     </div>
-    <div class="row" id="test">
-        <p class="text-center">Degree</p>
+    <div class="row">
+        <h3 id="degree" title="Toggle Degree">Degree</h3>
     </div>
-    <div class="row" id="data">
-        <p>My location</p>
+    <div class="row">
+        <h2 id="location">My location</h2>
+    </div>
+    <div class="row" id="credit">
+        <p>Icons made by <a href="https://darkskyapp.github.io/skycons/" target="_blank">The Dark Sky Company</a></p>
     </div>
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="script.js"></script>
 
 </body>
 </html>
