@@ -45,6 +45,7 @@ function getWeather(){
 
     var locationContent = $("#location");
     var degreeContent = $("#degree");
+    var weatherContent = $("#weather-text");
 
     var body = $("body");
 
@@ -60,7 +61,7 @@ function getWeather(){
         var weather = data.weather[0].main;
         var cityName = data.name;
         var country = data.sys.country;
-        temp = Math.floor(data.main.temp);
+        temp = data.main.temp.toFixed(0);
 
         //get current weather condition depending on id
         if((id>=200 && id<=232) || (id>=960 && id<=962)){
@@ -86,10 +87,9 @@ function getWeather(){
         icon.set("weather-icon",weatherCondition);
         icon.play();
 
-        arr = [id,weather,cityName,country];
-
-        locationContent.text(cityName + " , " + country);
+        locationContent.text(cityName + "," + country);
         degreeContent.text(temp + String.fromCharCode(176) + "C");
+        weatherContent.text(weather);
 
         body.fadeIn(500);
     });
@@ -100,11 +100,11 @@ function degreeConvertion(){
     var degreeContent = $("#degree");
 
     if(isCelsius){
-        temp = (temp*9/5) + 32;
+        temp = ((temp*9/5) + 32).toFixed(0);
         isCelsius = false;
         degreeContent.text(temp + String.fromCharCode(176) + "F");
     }else{
-        temp = (temp-32)*5/9;
+        temp = ((temp-32)*5/9).toFixed(0);
         isCelsius = true;
         degreeContent.text(temp + String.fromCharCode(176) + "C");
     }

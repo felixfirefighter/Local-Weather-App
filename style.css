@@ -27,12 +27,13 @@ p {
 }
 
 #weather-icon{
-    margin: 32px;
+    margin: 32px 0 0 0;
 }
 
 #degree{
     color: #2196F3;
     cursor: pointer;
+    display: inline-block;
 }
 
 #credit{
