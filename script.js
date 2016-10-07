@@ -26,7 +26,7 @@ $(document).ready(function () {
 });
 
 function getLocation(){
-    if (!navigator.geolocation) {
+    if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
             lat = Math.floor(position.coords.latitude);
             lon = Math.floor(position.coords.longitude);
